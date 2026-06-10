@@ -1,0 +1,57 @@
+/* NavBar.css */
+.nav-tabs {
+  background-color: transparent;
+  padding: 0 1rem;
+}
+
+.nav-tabs ul {
+  position: relative; /* needed for absolute slider */
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+  border-radius: 1.25rem;
+  border: #ccc solid 1.4px;
+  width: fit-content;
+  margin: auto;
+  background-color: whitesmoke;
+}
+
+.nav-tabs li {
+  margin: 0;
+  position: relative; /* ensure z-index stacking */
+  z-index: 1;
+}
+
+.nav-tabs a {
+  display: inline-block;
+  padding: 0.25rem 1.25rem;
+  text-decoration: none;
+  color: #495057;
+  font-weight: 500;
+  border-radius: 1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-tabs a:hover {
+  color: #0d6efd;
+  background-color: transparent; /* no individual background */
+}
+
+/* The moving white slider */
+.nav-tabs .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 1rem;
+  transition: left 0.3s ease, width 0.3s ease;
+  z-index: 0;
+}
+
+/* Keep text color for active tab */
+.nav-tabs .active {
+  color: #0d6efd;
+}
